@@ -1,9 +1,8 @@
 from sqlalchemy import Column, Integer, String
-from sqlalchemy.orm import declarative_base
+from app.db.base import Base
 
-ChapterBase = declarative_base()
 
-class Chapter(ChapterBase):
+class Chapter(Base):
     __tablename__ = "chapter"
     id = Column(Integer, primary_key=True, autoincrement=True)
     title = Column(String, nullable=True)
